@@ -1,0 +1,52 @@
+<!-- <ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Chats</ion-title>
+        <ion-buttons end>
+            <ion-spinner color="light" *ngIf="!(chats | async)"></ion-spinner>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="(chats | async)">
+    <a ion-item *ngFor="let chat of chats | async" (click)="openChat(chat.key)">
+        <ion-avatar item-left>
+            <img *ngIf="!chat.picture" src="assets/images/default.jpg">
+            <img *ngIf="chat.picture" src="{{chat.picture}}">
+        </ion-avatar>
+        <span>{{chat.email}}</span>
+        <h1>chat : {{chat.email}}</h1>
+    </a>
+</ion-content> -->
+
+
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Conversations</ion-title>
+        <ion-buttons end>
+            <ion-spinner color="light" *ngIf="!chats"></ion-spinner>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="(chats)">
+    <ion-grid>
+        <ion-row>
+            <ion-searchbar placeholder="Conversations" #searchBox (keyup)="searchChat(searchBox.value)" (ionCancel)="onCancel($event)"
+                (ionClear)="onCancel($event)"></ion-searchbar>
+        </ion-row>
+        <ion-row>
+            <ion-list inset no-lines>
+                <a ion-item *ngFor="let chat of filteredList" (click)="openChat(chat)" class="user-card">
+                    <ion-thumbnail item-start>
+                        <img *ngIf="!chat.picture" src="assets/icon/avatar.png">
+                        <img *ngIf="chat.picture" src="{{chat.picture}}">
+                    </ion-thumbnail>
+                    <p style="color:white">{{chat.email}}</p>
+                    <h2 *ngIf="chat.fullName"> {{chat.fullName}}</h2>
+                    <ion-badge item-end color="danger" *ngIf="chat.badgeCount">{{chat.badgeCount}}</ion-badge>
+                </a>
+            </ion-list>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

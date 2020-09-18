@@ -1,0 +1,99 @@
+chat-view {
+ 
+        .toolbar-background-md{
+          background: transparent;
+        }
+        ion-toolbar{
+          position: fixed;
+          bottom: 50px;
+          left: 50%;
+          right: 50%;
+          left: 0px;
+        }  
+        .scroll-content{
+          margin-bottom: 120px !important;
+        }
+  .messages {
+    .message {
+     width: 70%;
+    padding: 6px 15px;
+    background: rgba(254, 250, 0, 0.384);
+    color: #fff;
+    border-radius: 50px 50px;
+    margin: 5px;
+    float: left;
+    .picture{
+      border-radius:50px;
+    }
+    }
+    .message.picture {
+      background: transparent;
+      padding : 0px;
+      border-radius : 50px
+      
+    } 
+    .message.me {
+      float: right;
+      background:rgba(225, 92, 72, 0.616);
+      color: #fff;
+      text-align: right;
+    }
+  }
+ 
+
+    .fab[mini]{
+         background: #e15d48;
+         margin: 0;
+         color: #fff;
+         z-index: 999;
+      // position: absolute;
+      // z-index: 999;
+      // top: 3px;
+    }
+    .fab[mini].first{
+       margin: 0;
+      // margin-bottom: -20px;
+       margin-left: -25px;
+      background: rgba(250, 214, 10, 0.932);
+      
+      position: absolute;
+      
+      top: 3px;
+    }
+    .fab[mini].second{
+       margin: 0;
+       //margin-bottom: 20px;
+       margin-left: 20px;
+      background: rgba(95, 85, 30, 0.932);
+      position: absolute;
+      z-index: 999;
+      top: 3px;
+    }
+
+     .fab[mini].third{
+       margin: 0;
+       //margin-bottom: 20px;
+       //margin-left: 20px;
+      position: absolute;
+      z-index: 999;
+      top: 3px;
+    }
+     .rounded {
+       
+      left:28px;
+      bottom: 3px;
+      margin: 3px;
+    }
+   
+   .margin-letf-60{
+     margin-left: -90px;
+   }
+
+   .text-input{
+     margin-left: 30px;
+     margin-right: 80px;
+   }
+
+}
+
+ 

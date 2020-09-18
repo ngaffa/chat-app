@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Login</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="padding">
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12 padding>
+                <div>
+                    <button round ion-button full (click)="signInWithFacebook()" icon-start>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                        Connection avec Facebook
+                    </button>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12 padding>
+                <div>
+                    <button round ion-button full (click)="signInWithGoogle()" icon-start>
+                        <ion-icon name="logo-google"></ion-icon>
+                        Connection avec Google
+                    </button>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <form [formGroup]="loginForm">
+                    <ion-list padding>
+
+                        <ion-item class="rounded">
+                            <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+                        </ion-item>
+
+                        <ion-item class="rounded">
+                            <ion-input type="password" placeholder="Mot de passe" formControlName="password"></ion-input>
+                        </ion-item>
+                    </ion-list>
+
+                    <div padding>
+                        <button round ion-button primary block (click)="signin()" [disabled]="!loginForm.valid">Connection</button>
+                        <button round ion-button block favorite icon-start (click)="createAccount()" [disabled]="!loginForm.valid">
+                            <ion-icon name="person"></ion-icon>
+                            <span>Créer compte</span>
+                        </button>
+                    </div>
+
+
+                </form>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+    <!-- <div padding>
+        <button round ion-button (click)="signInWithFacebook()" icon-start>
+            <ion-icon name="logo-facebook"></ion-icon>
+            Connection avec Facebook
+        </button>
+    </div>
+    <div padding>
+        <button round ion-button (click)="signInWithGoogle()" icon-start>
+            <ion-icon name="logo-google"></ion-icon>
+            Connection avec Google
+        </button>
+    </div> -->
+    <!-- <form [formGroup]="loginForm">
+        <ion-list padding>
+
+            <ion-item class="rounded">
+                <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+            </ion-item>
+
+            <ion-item class="rounded">
+                <ion-input type="password" placeholder="Mot de passe" formControlName="password"></ion-input>
+            </ion-item>
+        </ion-list>
+
+        <div padding>
+            <button round ion-button primary block (click)="signin()" [disabled]="!loginForm.valid">Connection</button>
+            <button round ion-button block favorite icon-start (click)="createAccount()" [disabled]="!loginForm.valid">
+                <ion-icon name="person"></ion-icon>
+                <span>Créer compte</span>
+            </button>
+        </div>
+
+
+    </form> -->
+
+</ion-content>

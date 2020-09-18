@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "1059962744873",
+    "firebase_url": "https://araberencontre.firebaseio.com",
+    "project_id": "araberencontre",
+    "storage_bucket": "araberencontre.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1059962744873:android:536e6ffcd389bb97",
+        "android_client_info": {
+          "package_name": "com.android.chatApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1059962744873-4vu6nqf1f8i8o6dkfs6ds4cgv3koj8us.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.chatApp",
+            "certificate_hash": "d767c89bdb77c5303306fe6bb4819527bc76cbd1"
+          }
+        },
+        {
+          "client_id": "1059962744873-tlcfk7m6ko86k1p6qmpch5625b6gp0gs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.chatApp",
+            "certificate_hash": "9c26be75128a43d9ff9956bdf177c6f736c90dad"
+          }
+        },
+        {
+          "client_id": "1059962744873-588hnrep9ftrc6cue7ad8l142e9fn1qh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiDoGncv7GbEvKSsE4UxFNrJCUmDwEJmU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1059962744873-588hnrep9ftrc6cue7ad8l142e9fn1qh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1059962744873-q74ts0pobmk80lbtlmb5ha3uju2a45ca.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.android.chatApp"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

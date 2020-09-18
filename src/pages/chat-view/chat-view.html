@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Conversation</ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button (click)="sendPicture()">
+        <ion-icon name="image"></ion-icon> Image
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="messages">
+
+    <!-- <ion-content> -->
+    <div class="message" *ngFor="let chat of chats | async" [ngClass]="{'me': uid === chat.from, 'picture':chat.picture}">
+      <div *ngIf="chat.sendDate" class="chat-date">{{chat.sendDate | date:'dd MMM yyyy - HH:mm'}}
+      </div>
+      <span *ngIf="chat.message">{{chat.message}}</span>
+      <img *ngIf="chat.picture" src="{{chat.picture}}" class="picture">
+    </div>
+    <!-- </ion-content> -->
+
+    <ion-toolbar>
+      <ion-row>
+        <ion-col col-2 *ngIf="!(chats | async)" no-padding>
+          <ion-spinner color="light"></ion-spinner>
+        </ion-col>
+
+        <ion-col col-10 *ngIf="(chats | async)" no-padding>
+
+          <!-- <div class="">
+            <button ion-fab mini icon-only (click)="sendPicture()">
+              <ion-icon name="attach"></ion-icon>
+            </button>
+          </div>
+          <div class="">
+            <button ion-fab mini icon-only (click)="sendPicture(true)">
+              <ion-icon name="image"></ion-icon>
+            </button>
+          </div> -->
+
+          <div class="">
+            <ion-fab left mini #fab>
+              <button ion-fab mini>
+                <ion-icon name="image"></ion-icon>
+              </button>
+              <ion-fab-list side="right">
+                <button ion-fab icon-only mini (click)="sendPicture(true, fab)" class="first">
+                  <ion-icon name="image"></ion-icon>
+                </button>
+                <button ion-fab icon-only mini (click)="sendPicture(false, fab)" class="second">
+                  <ion-icon name="attach"></ion-icon>
+                </button>
+              </ion-fab-list>
+
+            </ion-fab>
+          </div>
+          <ion-item class="rounded">
+            <ion-input type="text" placeholder="Message" [(ngModel)]="message"></ion-input>
+
+          </ion-item>
+          <!-- <div class=""><button ion-fab mini icon-only (click)="sendMessage()" class="right">
+              <ion-icon name="send"></ion-icon>
+            </button>
+          </div> -->
+
+
+        </ion-col>
+        <ion-col col-2 no-padding *ngIf="(chats | async)">
+          <button ion-fab mini icon-only (click)="sendMessage()" class="third">
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+  </div>
+
+  <!-- <ion-toolbar>
+    <ion-row>
+      <ion-col width-10 *ngIf="!(chats)">
+        <ion-spinner></ion-spinner>
+      </ion-col>
+
+      <ion-col col-10 [hidden]="!chats">
+        <ion-item class="rounded">
+          <ion-input type="text" placeholder="Enter Message" [(ngModel)]="message"></ion-input>
+        </ion-item>
+
+      </ion-col>
+      <ion-col col-2 [hidden]="!chats">
+        <button ion-fab mini icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar> -->
+</ion-content>
